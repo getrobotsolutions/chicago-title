@@ -50,7 +50,7 @@ audio {
 }
 
 #mainwrap {
-    background: rgba(54, 25, 25, .5);
+    background: rgba(1, 28, 57, 0.74);
     padding-bottom: 30px;
     ;
 
@@ -91,7 +91,7 @@ audio {
     padding:21px;
 
     width: 97%;
-    border: thick solid #d9534f;
+    border: thick solid #011c39;
     margin: 10px;
 }
 
@@ -162,6 +162,6 @@ audio {
 }
 .yellowcolor{
 
-    background-color: #d9534f;
+    background-color: #011c39;
     height: 40px;
 }

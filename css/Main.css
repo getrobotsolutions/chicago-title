@@ -69,7 +69,7 @@ nav .nav-language button {
 	/*background-image: url("../assets/background.png");
 	background-repeat: no-repeat;
 	background-size: cover;*/
-	height: 60%;
+	height: 63%;
 	border-bottom:10px solid;
 	border-bottom-color: #21206c;
 }
@@ -88,8 +88,8 @@ nav .nav-language button {
 .main-menu-matrix table button {
 	margin-bottom: 100px;
 	background-color:  #011c39;
-	width: 290px;
-	height: 300px;
+	width: 350px;
+    height: 365px;
 	border: none;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	
