@@ -207,22 +207,20 @@ function OnJoystickControlled(strPara){
     if(btn_info[0] == '1'){
             window.external.ChangeLanguage("en-us");
             SetVolume(1);
-            window.external.InitPose();
-            window.external.SetHeadRoll(-15,50); 
-            //window.external.PlaySpeech("MailChimp stinks big time, you should use Convey");//I'm here to assist you, press any button on my screen to begin");
+            window.external.PlaySpeech("Hello and thank you for coming to Chicago Title and Commonwealth Land Title’s Seminar – The Agency of Tomorrow.");//I'm here to assist you, press any button on my screen to begin");
           
     }
 
     if(btn_info[1] == '1'){
         window.external.ChangeLanguage("en-us");
         SetVolume(1);
-        //window.external.PlaySpeech("Hi, I like you.  I want to give you a free trial of Convey, please tell one of my human friends that you want a free trial.");
+        window.external.PlaySpeech("Thank you for stopping to see me.");
         
     }
     if(btn_info[2] == '1'){
         window.external.ChangeLanguage("en-us");
             SetVolume(1);
-            //window.external.PlaySpeech("Convey is awesome, it's the best");
+            window.external.PlaySpeech("Chicago Title and Commonwealth Land Title have the best title agents!");
     }
     if(btn_info[3] == '1'){
         window.external.ChangeLanguage("en-us");
@@ -245,12 +243,15 @@ function OnJoystickControlled(strPara){
     }
     if(btn_info[6] == '1'){
         //SetHeadYaw(35, 23);
+        window.external.PlaySpeech("Please check out our Title Tips of the Day.");
     }
     if(btn_info[7] == '1'){
         //SetHeadYaw(0,23);
+        window.external.PlaySpeech("Would you like me to take a picture?");
     }
     if(btn_info[8] == '1'){
         //SetHeadYaw(35, 23);
+        window.external.PlaySpeech("Would you like to take a picture with me?");
     }
     if(btn_info[9] == '1'){
         //SetHeadYaw(0,23);
