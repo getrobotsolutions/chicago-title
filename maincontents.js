@@ -236,10 +236,11 @@ function OnJoystickControlled(strPara){
         
     }
     if(btn_info[4] == '1'){
-        //SetHeadYaw(-35, 23);       
+        //SetHeadYaw(-35, 23);  
+        SetHeadRoll(-15,50);     
     }
     if(btn_info[5] == '1'){
-       SetHeadYaw(0,23);
+       SetHeadRoll(15,50);
     }
     if(btn_info[6] == '1'){
         SetHeadYaw(35, 23);
