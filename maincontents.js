@@ -200,6 +200,16 @@ dialouges[6]="Well, after being re-booted, I am going to give it a whirl, but my
 
 var dialougeIndex=0;
 
+var firstQuestions = new Array( );
+firstQuestions[0]="Hello and thank you for coming to Chicago Title and Commonwealth Land Title’s Seminar – The Agency of Tomorrow.";
+firstQuestions[1]="Thank you for stopping to see me.";
+firstQuestions[2]="Please check out our Title Tips of the Day.";
+firstQuestions[3]="Would you like me to take a picture?";
+firstQuestions[4]="Would you like to take a picture with me?";
+firstQuestions[5]="Chicago Title and Commonwealth Land Title have the best title agents!";
+
+var firstQuestionsIndex=0;
+
 function OnJoystickControlled(strPara){
     var btn_info = strPara.split(',')[4];
 
@@ -207,20 +217,25 @@ function OnJoystickControlled(strPara){
     if(btn_info[0] == '1'){
             window.external.ChangeLanguage("en-us");
             SetVolume(1);
-            window.external.PlaySpeech("Hello and thank you for coming to Chicago Title and Commonwealth Land Title’s Seminar – The Agency of Tomorrow.");//I'm here to assist you, press any button on my screen to begin");
-          
+            if(firstQuestionsIndex<6){
+                window.external.PlaySpeech(firstQuestions[firstQuestionsIndex]);
+                firstQuestionsIndex++;
+            }
+            else{
+                firstQuestionsIndex=0;
+            }
     }
 
     if(btn_info[1] == '1'){
         window.external.ChangeLanguage("en-us");
         SetVolume(1);
-        window.external.PlaySpeech("Thank you for stopping to see me.");
+        //window.external.PlaySpeech("Thank you for stopping to see me.");
         
     }
     if(btn_info[2] == '1'){
         window.external.ChangeLanguage("en-us");
             SetVolume(1);
-            window.external.PlaySpeech("Chicago Title and Commonwealth Land Title have the best title agents!");
+            //window.external.PlaySpeech("Chicago Title and Commonwealth Land Title have the best title agents!");
     }
     if(btn_info[3] == '1'){
         window.external.ChangeLanguage("en-us");
@@ -246,15 +261,15 @@ function OnJoystickControlled(strPara){
     }
     if(btn_info[7] == '1'){
         //SetHeadYaw(35, 23);
-        window.external.PlaySpeech("Please check out our Title Tips of the Day.");
+        //window.external.PlaySpeech("Please check out our Title Tips of the Day.");
     }
     if(btn_info[8] == '1'){
         //SetHeadYaw(0,23);
-        window.external.PlaySpeech("Would you like me to take a picture?");
+        //window.external.PlaySpeech("Would you like me to take a picture?");
     }
     if(btn_info[9] == '1'){
         //SetHeadYaw(35, 23);
-        window.external.PlaySpeech("Would you like to take a picture with me?");
+        //window.external.PlaySpeech("Would you like to take a picture with me?");
     }
     
     if(btn_info[10] == '1'){
