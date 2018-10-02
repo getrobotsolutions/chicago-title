@@ -189,6 +189,17 @@ function getGetOrdinal(n) {
     return n+'<sup>'+(s[(v-20)%10]||s[v]||s[0])+'</sup>';
 }
 
+var dialouges = new Array( );
+dialouges[0]="Adrienne, it is my pleasure to meet you and all of your title agents!  I am so excited to be here and thank you from the bottom of my hard drive for including me.   I hope I can help all of your agents recharge their batteries today.  Your title agents are so excited to be here and I think they like me.  I know because they have been reading all of my title tips, asked me to dance, and kept asking me to be in a picture with me!  ";
+dialouges[1]="Well, Adrienne, my parents are R2D2 and C3P0 – they had to adopt me, of course!";
+dialouges[2]="Well, Adrienne, my parents are R2D2 and C3P0 – they had to adopt me, of course!";
+dialouges[3]="I like computer chips.";
+dialouges[4]="Yes, I sometimes am asked to wire funds.";
+dialouges[5]="I was not well, Adrienne.  I had a virus.";
+dialouges[6]="Well, after being re-booted, I am going to give it a whirl, but my skills are a bit rusty.";
+
+var dialougeIndex=0;
+
 function OnJoystickControlled(strPara){
     var btn_info = strPara.split(',')[4];
 
@@ -196,25 +207,32 @@ function OnJoystickControlled(strPara){
     if(btn_info[0] == '1'){
             window.external.ChangeLanguage("en-us");
             SetVolume(1);
-            window.external.PlaySpeech("MailChimp stinks big time, you should use Convey");//I'm here to assist you, press any button on my screen to begin");
+            //window.external.PlaySpeech("MailChimp stinks big time, you should use Convey");//I'm here to assist you, press any button on my screen to begin");
           
     }
 
     if(btn_info[1] == '1'){
         window.external.ChangeLanguage("en-us");
         SetVolume(1);
-        window.external.PlaySpeech("Hi, I like you.  I want to give you a free trial of Convey, please tell one of my human friends that you want a free trial.");
+        //window.external.PlaySpeech("Hi, I like you.  I want to give you a free trial of Convey, please tell one of my human friends that you want a free trial.");
         
     }
     if(btn_info[2] == '1'){
         window.external.ChangeLanguage("en-us");
             SetVolume(1);
-            window.external.PlaySpeech("Convey is awesome, it's the best");
+            //window.external.PlaySpeech("Convey is awesome, it's the best");
     }
     if(btn_info[3] == '1'){
         window.external.ChangeLanguage("en-us");
         SetVolume(1);
-        window.external.PlaySpeech("O M G, that's horrible!  You should use Convey");
+        if(dialougeIndex<7){
+        window.external.PlaySpeech(dialouges[dialougeIndex]);
+        dialougeIndex++;
+       }
+       else{
+        dialougeIndex=0;
+       }
+
         
     }
 }
