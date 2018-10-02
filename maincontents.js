@@ -191,7 +191,7 @@ function getGetOrdinal(n) {
 
 var dialouges = new Array( );
 dialouges[0]="Adrienne, it is my pleasure to meet you and all of your title agents!  I am so excited to be here and thank you from the bottom of my hard drive for including me.   I hope I can help all of your agents recharge their batteries today.  Your title agents are so excited to be here and I think they like me.  I know because they have been reading all of my title tips, asked me to dance, and kept asking me to be in a picture with me!  ";
-dialouges[1]="Well, Adrienne, my parents are R2D2 and C3P0 – they had to adopt me, of course!";
+dialouges[1]="Yes, I have two trans-sisters.";
 dialouges[2]="Well, Adrienne, my parents are R2D2 and C3P0 – they had to adopt me, of course!";
 dialouges[3]="I like computer chips.";
 dialouges[4]="Yes, I sometimes am asked to wire funds.";
