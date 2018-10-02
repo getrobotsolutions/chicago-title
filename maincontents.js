@@ -207,7 +207,8 @@ function OnJoystickControlled(strPara){
     if(btn_info[0] == '1'){
             window.external.ChangeLanguage("en-us");
             SetVolume(1);
-            SetHeadRoll(-15,50); 
+            window.external.InitPose();
+            window.external.SetHeadRoll(-15,50); 
             //window.external.PlaySpeech("MailChimp stinks big time, you should use Convey");//I'm here to assist you, press any button on my screen to begin");
           
     }
