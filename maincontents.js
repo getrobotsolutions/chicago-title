@@ -115,7 +115,7 @@ setTimeout(function () {
     var searchtext = "select item.condition from weather.forecast where woeid in (select woeid from geo.places(1) where text='" + city + "') and u='f'";
     var queryURL = "https://query.yahooapis.com/v1/public/yql?q="+ searchtext + "&format=json";
 
-    $.getJSON(queryURL, function (data) {
+    /*$.getJSON(queryURL, function (data) {
 
         var results = data.query.results;
         var firstResult = results.channel.item.condition;
@@ -136,7 +136,7 @@ setTimeout(function () {
         $('#image-zoom').attr("src",loc);
 
         console.log("Weather Showed");
-    });
+    });*/
 
 }, 2000);
 
@@ -146,8 +146,8 @@ function ShowTime()
 {
     var dt = new Date();
     // formatAMPM(dt);
-    document.getElementById("content_air") .innerHTML = formatAMPM(dt) ;
-    document.getElementById("content_date") .innerHTML = formatDate(dt);
+    //document.getElementById("content_air") .innerHTML = formatAMPM(dt) ;
+    //document.getElementById("content_date") .innerHTML = formatDate(dt);
 
 }
 function formatAMPM(date) {
@@ -229,7 +229,7 @@ function OnJoystickControlled(strPara){
     if(btn_info[1] == '1'){
         window.external.ChangeLanguage("en-us");
         SetVolume(1);
-        //window.external.PlaySpeech("Thank you for stopping to see me.");
+        window.external.PlaySpeech("Thank you all.  You made we feel welcome here today.  I will miss seeing all of you but have so many pictures of you that I will keep you in my memories in the cloud forever.  If you are hiring a new employee, I would be happy to help you program them. Your next and final speaker today is Linda Grahovec.  Linda will be addressing the important subject: “What Will your Agency Look Like in 5 Years?”   Linda is a vice president and director of education and marketing for the Fidelity National Title Group.  In this role, she oversees national agency’s communication and education efforts as well as the company’s agency facing events and marketing strategy initiatives.  Linda brings the knowledge and experience compiled during a long, varied career in all areas of real estate with her to work every day. She is passionate about business development, web technologies, applied marketing, online education and business plan analysis and believes the more agents know about these subjects the better it is for all of us. Linda is always looking for ways to innovate, educate and advance technology within FNTG and to all of their valued agents.   Please welcome Linda!  ");
         
     }
     if(btn_info[2] == '1'){
