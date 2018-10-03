@@ -102,7 +102,7 @@ function UpdateCamImage()
 		ctx.drawImage(this, 0, 0, 910, 682);
 	}
 	image.src = "data:image/gif;base64," + img;
-    
+
 }
 
 //---------------------------------------------------------------------------//
@@ -259,7 +259,7 @@ function SendEmail()
     // 메일 전송에 필요한 정보
     var addr = message;
     //var addr = "paul@robotaisolutions.com";
-    var subject = "TYour Robot Photo";
+    var subject = "Your Robot Photo";
     var body = "Thank you for coming to Chicago Title and Commonwealth Land Title’s Seminar – “The Agency of Tomorrow.”";
     //var mail_server = "smtp.gmail.com";
     //var mail_addr_sender = "ict.muscatairport@gmail.com";
