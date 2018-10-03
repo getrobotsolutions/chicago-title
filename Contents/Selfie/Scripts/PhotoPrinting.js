@@ -90,11 +90,12 @@ function SetImage(str)
 //---------------------------------------------------------------------------//
 //-- 실시간 카메라 영상 디스플레이 ----------------------------------------------//
 //---------------------------------------------------------------------------//
+    var canvas = document.getElementById("camImage");
+    var ctx = canvas.getContext("2d");
 function UpdateCamImage()
 {
     var img = GetCaptureImage();
-	var canvas = document.getElementById("camImage");
-	var ctx = canvas.getContext("2d");
+
 	var image = new Image();
 
 	image.onload = function() 
@@ -102,16 +103,7 @@ function UpdateCamImage()
 		ctx.drawImage(this, 0, 0, 910, 682);
 	}
 	image.src = "data:image/gif;base64," + img;
-        make_base();
-
-function make_base()
-{
-  base_image = new Image();
-  base_image.src = 'images/photoframe01.png';
-  base_image.onload = function(){
-    ctx.drawImage(base_image, 5, 0, 901, 675);
-  }
-}
+        
 }
 
 //---------------------------------------------------------------------------//
@@ -170,6 +162,16 @@ function CountDown()
                 
                 window.external.PauseCamViewer();
                 //window.external.PlaySpeech(speechJsonObj["frame"][c_language]);
+                make_base();
+
+function make_base()
+{
+  base_image = new Image();
+  base_image.src = 'images/photoframe01.png';
+  base_image.onload = function(){
+    ctx.drawImage(base_image, 5, 0, 901, 675);
+  }
+}
             }
             
             isPhotoTaken = true;
