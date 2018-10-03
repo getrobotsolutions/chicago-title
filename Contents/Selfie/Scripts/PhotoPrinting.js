@@ -183,7 +183,8 @@ function SelectFrame(num)
     if (num == 1)
     {
         document.getElementById("frame").src = "";
-        frameImagePath = "";
+        //frameImagePath = "";
+        frameImagePath = GetCurrentFolderPath() + "Images/photoframe01.png";
     }
     
     // 액자 있음
@@ -257,8 +258,8 @@ function SendEmail()
     // 메일 전송에 필요한 정보
     var addr = message;
     //var addr = "paul@robotaisolutions.com";
-    var subject = "Thanks for visiting Konvey";
-    var body = "Email : " + message;
+    var subject = "TYour Robot Photo";
+    var body = "Thank you for coming to Chicago Title and Commonwealth Land Title’s Seminar – “The Agency of Tomorrow.”";
     //var mail_server = "smtp.gmail.com";
     //var mail_addr_sender = "ict.muscatairport@gmail.com";
     //var pswd = "123456789K";
