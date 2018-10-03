@@ -102,6 +102,16 @@ function UpdateCamImage()
 		ctx.drawImage(this, 0, 0, 910, 682);
 	}
 	image.src = "data:image/gif;base64," + img;
+        make_base();
+
+function make_base()
+{
+  base_image = new Image();
+  base_image.src = 'images/photoframe01.png';
+  base_image.onload = function(){
+    ctx.drawImage(base_image, 5, 0, 901, 675);
+  }
+}
 }
 
 //---------------------------------------------------------------------------//
